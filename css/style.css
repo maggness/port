@@ -5,6 +5,15 @@ body {
   font-style: normal;
 }
 
+/* Navigatie */
+.navigatie {
+  position: fixed;
+  width: 100%;
+  height: 3.6em;
+  background: white;
+  z-index: 1;
+}
+
 .navigatie ul {
   padding: 0;
   margin: 0;
@@ -40,6 +49,7 @@ body {
   border: 2px solid black;
   z-index: 20;
   position: inherit;
+  outline: none;
 }
 
 .navigatie ul li nav button:first-of-type{
@@ -64,124 +74,137 @@ border-radius: 20px 0 0px 0;
   align-self: auto;
 }
 
-.hamburger {
-  animation: vliegen 7s forwards;
-}
-
-@keyframes vliegen {
-  0%{
-    transform: translate(0px, 0px);
-  }
- 15% {
-    transform: translate(0px, -20%);
- }
- 30% {
-    transform: translate(0px, -40%);
- }
- 45% {
-    transform: translate(0px, -60%);
- }
- 60% {
-    transform: translate(0px, -80%);
- }
- 75% {
-    transform: translate(0px, -100%);
- }
- 90% {
-    transform: translate(0px, -120%);
- }
- 100% {
-    transform: translate(0px, -140%);
- }
+/* Hamburger menu */
+.hamburgerButton {
+  position: absolute;
+  right: 1.5em;
+  width: 3em;
+  height: 3em;
+  background: transparent;
+  border: none !important;
+  outline: none;
+  top: 0.5em;
 }
 
 .hamburgerBoven {
   position: absolute;
-  width: 1.6em;
-  height: 0.2em;
+  width: 1.9em;
+  height: 0.1em;
   background-color: black;
   top: 40%;
-  right: 1.5em;
-}
-
-.hamburgerBovenvliegen {
-  top: 50%;
-  animation: boven 1s infinite;
-}
-
-@keyframes boven {
-  5% {
-    transform: translate(49%, 0);
-  }
-  50% {
-    transform: translate(-10%, 300%) rotate(70deg);
-  }
-  100% {
-    transform: translate(49%, 0);
-  }
 }
 
 .hamburgerOnder {
   position: absolute;
-  width: 1.6em;
-  height: 0.2em;
+  width: 1.9em;
+  height: 0.1em;
   background-color: black;
   top: 65%;
-  right: 1.5em;
-}
-
-.hamburgerOndervliegen {
-  top: 50%;
-  animation: onder 1s infinite;
-}
-
-@keyframes onder {
-  0% {
-    transform: translate(-49%, 0);
-  }
-  50% {
-    transform: translate(-49%, 300%) rotate(-70deg);
-  }
-  100% {
-    transform: translate(-49%, 0);
-  }
 }
 
 main{
-  padding: 0;
-  margin: 5em 0 0 0;
+  padding: 6em 0 0 0;
+}
+
+/* Section 1 */
+.welcomeGrid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 0 7em 0;
 }
 
-.welcomeDiv{
-  position: relative;
+.welcomeSection {
+  grid-column: 2;
+}
+
+.welcomeImage {
   width: 100%;
-  height: 12.3em;
-  align-self: center;
-  grid-column-start: 2;
-  border: 1px black solid;
-}
+  }
 
-.welcomeDiv h2{
-  font-family: acier-bat-solid, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  position: absolute;
-  margin: 0;
-  font-size: 8em;
-  top: 0.2em;
-  left: 0.1em;
-}
-
-.textDiv {
-  display: grid;
-}
-
-.welcomeDiv p{
-  margin: 0;
-  white-space: nowrap;
+/* Section 2 */
+.TakeALookSection {
+  display: block;
   overflow: hidden;
-  max-width: 100%;
+  background-color: black;
+  height: 160em;
+}
+
+.lijnImg{
+  width: 100%;
+}
+
+.takealookimg{
+  position: relative;
+  width: 30%;
+  margin: 2em 0 12em 0;
+  left: 35%;
+}
+
+.TakeALookText{
+  font-size: 1em;
+  color: white;
+  margin: 0 0 13em 0;
+}
+
+.ProjctSection {
+  position: relative;
+  background-color: white;
+  height: 32em;
+  width: 100%;
+  margin-bottom: 0.3em;
+}
+
+.kleurenimgRechts {
+  position: absolute;
   height: 100%;
+  right: 0;
+}
+
+.NaamRechts {
+  font-family: 'Coda Caption', sans-serif;
+  margin: 0.05em 0.3em 0em 0em;
+  position: absolute;
+  font-weight: bold;
+  font-size: 2em;
+  right: 0;
+}
+
+.UitlegRechts {
+  font-size: 1em;
+  position: absolute;
+  margin: 4.05em 1em 0em 0em;
+  right: 0;
+}
+
+.kleurenimgLinks {
+  position: absolute;
+  height: 100%;
+  left: 0;
+}
+
+.NaamLinks {
+  font-family: 'Coda Caption', sans-serif;
+  margin: 0.05em 0em 0em 0.5em;
+  position: absolute;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.UitlegLinks {
+  font-size: 1em;
+  position: absolute;
+  margin: 4.05em 0em 0em 1em;
+}
+
+/* footer */
+footer {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  height: 18em;
+}
+
+.ThankYouText {
+  font-size: 1em;
+  margin: 0;
 }
